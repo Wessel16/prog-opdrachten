@@ -12,7 +12,7 @@ function ClientIsready(c){
     console.log("Logged in as: " + c.user.tag); 
 }
 function OnMessage(message){
-    const channel = client.channels.cache.get('1164821659895742547');
+    const channel = client.channels.cache.get('');
     if(message.author.bot == false){
         //console.log(message);
         const content = message.content;
@@ -28,6 +28,6 @@ function OnMessage(message){
 client.once(Events.ClientReady, ClientIsready);
 client.on(Events.MessageCreate, OnMessage);
 
-client.login("MTE2NDg5Njk1MjcyNzYzMzk3MA.GKCjuP.946prIYEOkbuWBu_9Ig1jSYHZbvVCi6C5yjs98");
+client.login("");
 
 
