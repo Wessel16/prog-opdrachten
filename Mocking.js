@@ -1,16 +1,19 @@
-let rl = require('readline-sync')
-let vraag = rl.question("Zeg iets.") 
+let rl = require('readline-sync');
 
-let vraag2 = ""
-for (let i = 0; i < vraag.length; i++) {
-    let element = vraag[i];
-    if(i % 2 == 0){
-    element = element.toUpperCase()
-    }
-    vraag2 += element
-    }
-    console.log(vraag2)
-    
+let zin = rl.question("Zeg een zin:");
 
+console.log(mockZin(zin));
+
+function mockZin(zin){
+    let nieuweZin = ""
+    for (let i = 0; i < zin.length; i++) {
+        let element = zin[i]
+        if (Math.random() < 0.5) {
+            element = element.toUpperCase()
+        }
+        nieuweZin += element
+    }
+    return nieuweZin
+}
 
 
